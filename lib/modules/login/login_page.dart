@@ -3,6 +3,7 @@ import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_images.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
 import 'package:payflow/shared/widgets/social_login/social_login_button.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class LoginPage extends StatefulWidget {
   // ignore: prefer_const_constructors_in_immutables
@@ -60,9 +61,19 @@ class _LoginPageState extends State<LoginPage> {
                     padding:
                         const EdgeInsets.only(left: 40, right: 40, top: 40),
                     child: SocialLoginButton(
-                      onTap: () {
+                      onTap: () async {
                         // ignore: avoid_print
-                        print("Clicou");
+                        GoogleSignIn _googleSignIn = GoogleSignIn(
+                          scopes: [
+                            'email',
+                          ],
+                        );
+                        try {
+                          final response = await _googleSignIn.signIn();
+                          print(response);
+                        } catch (error) {
+                          print(error);
+                        }
                       },
                     ),
                   ),
