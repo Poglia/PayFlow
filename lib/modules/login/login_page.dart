@@ -5,6 +5,7 @@ import 'package:payflow/shared/themes/app_text_styles.dart';
 import 'package:payflow/shared/widgets/social_login/social_login_button.dart';
 
 class LoginPage extends StatefulWidget {
+  // ignore: prefer_const_constructors_in_immutables
   LoginPage({Key? key}) : super(key: key);
 
   @override
@@ -17,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColors.background,
+      // ignore: sized_box_for_whitespace
       body: Container(
         width: size.width,
         height: size.height,
@@ -59,6 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                         const EdgeInsets.only(left: 40, right: 40, top: 40),
                     child: SocialLoginButton(
                       onTap: () {
+                        // ignore: avoid_print
                         print("Clicou");
                       },
                     ),

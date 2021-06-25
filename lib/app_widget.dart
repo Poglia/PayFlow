@@ -4,6 +4,7 @@ import 'shared/themes/app_colors.dart';
 
 // ignore: use_key_in_widget_constructors
 class AppWidget extends StatelessWidget {
+  // ignore: annotate_overrides
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pay Flow',

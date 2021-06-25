@@ -26,6 +26,7 @@ class SocialLoginButton extends StatelessWidget {
               child:
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Image.asset(AppImages.google),
+                // ignore: prefer_const_constructors
                 SizedBox(width: 16),
                 Container(
                   height: 56,
