@@ -5,11 +5,16 @@ import 'package:payflow/modules/login/login_page.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 
 void main() {
-  runApp(AppWidget());
+  runApp(AppFirebase());
 }
 
 // ignore: use_key_in_widget_constructors
-class AppWidget extends StatelessWidget {
+class AppFirebase extends StatefulWidget {
+  @override
+  State<AppFirebase> createState() => _AppFirebaseState();
+}
+
+class _AppFirebaseState extends State<AppFirebase> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pay Flow',
